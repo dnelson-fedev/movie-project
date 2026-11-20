@@ -16,7 +16,7 @@ filterDropdown.addEventListener('change', ele => {
 async function filterMovies(event) {
   let filter = event;
   
-  const response = await fetch(`http://www.omdbapi.com/?apikey=df49e607&s=${inputEl.value}`);
+  const response = await fetch(`https://www.omdbapi.com/?apikey=df49e607&s=${inputEl.value}`);
   const data = await response.json();
   const movies = data.Search;
 
@@ -41,7 +41,7 @@ async function filterMovies(event) {
 
 
 async function showMovies(str) {
-  const response = await fetch(`http://www.omdbapi.com/?apikey=df49e607&s=${str}`);
+  const response = await fetch(`https://www.omdbapi.com/?apikey=df49e607&s=${str}`);
   const data = await response.json();
   const movies = data.Search;
 
